@@ -3,7 +3,7 @@ var position = 0;
 var Xmin = 0;
 var Xmax = 500;
 var reverse = false;
-var ball = document.getElementById('ball');
+var ball = document.getElementById("ball");
 
 function moveBall() {
     if (!reverse) position = position + velocity; else position = position - velocity;
