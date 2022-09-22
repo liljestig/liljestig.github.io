@@ -16,11 +16,11 @@ function moveBall() {
 
     if (!reverse) position = position + velocity; else position = position - velocity;
     if (position <= Xmin || position >= Xmax) reverse = !reverse;
-    console.log("position: " + position)
+    console.log("position: " + position);
 
     if (!reverseY) positionY = positionY + velocity; else positionY = positionY - velocity;
     if (positionY <= Ymin || positionY >= Ymax) reverseY = !reverseY;
-    console.log("positionY: " + positionY)
+    console.log("positionY: " + positionY);
 
     ball.style.left = position + "px";
     ball.style.top = positionY + "px";

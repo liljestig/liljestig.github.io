@@ -1,6 +1,6 @@
 var velocity = 100;
 var position = 0;
-var ball = document.getElementById('ball');
+var ball = document.getElementById("ball");
 
 function moveBall() {
     position = position + velocity;
