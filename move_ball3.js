@@ -1,15 +1,12 @@
 var velocity = 100;
-
 var position = 0;
 var Xmin = 0;
 var Xmax = 500;
 var reverse = false;
-
 var positionY = 0;
 var Ymin = 0;
 var Ymax = 500;
 var reverseY = false;
-
 var ball = document.getElementById("ball");
 
 function moveBall() {
@@ -26,4 +23,4 @@ function moveBall() {
     ball.style.top = positionY + "px";
 }
 
-setInterval(moveBall, 1000);
+setInterval(moveBall, 100);
