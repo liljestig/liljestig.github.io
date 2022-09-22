@@ -7,7 +7,7 @@ var positionY = 0;
 var Ymin = 0;
 var Ymax = 500;
 var reverseY = false;
-var ball = document.getElementById("ball");
+var ball = document.getElementById('ball');
 
 function moveBall() {
 
@@ -17,8 +17,8 @@ function moveBall() {
     if (!reverseY) positionY = positionY + velocity; else positionY = positionY - velocity;
     if (positionY <= Ymin || positionY >= Ymax) reverseY = !reverseY;
 
-    ball.style.left = position + "px";
-    ball.style.top = positionY + "px";
+    ball.style.left = position + 'px';
+    ball.style.top = positionY + 'px';
 }
 
 setInterval(moveBall, 100);
