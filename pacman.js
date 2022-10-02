@@ -22,11 +22,11 @@ function run() {
     img.style.left = x + 'px'; //update 'pacman' position
 }
 
-setInterval(run, 100); //execute 'run' function every 100ms
+setInterval(run, 300); //execute 'run' function every 100ms
 
 function reachEnd(dir, faceWidth, x, width) {
-    if (dir == 0 && x + faceWidth >= width) dir = 1; //keep going right
-    if (dir == 1 && x < 0) dir = 0; //turn around
+    //Keep going to the right, or flip direction
+    if (direction == 0 && pos + imgWidth >= pageWidth) direction = 1; else if (direction == 1 && pos <= 0) direction = 0;
     return dir; //return direction
 }
 
