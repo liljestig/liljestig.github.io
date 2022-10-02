@@ -29,5 +29,3 @@ function reachEnd(dir, faceWidth, x, width) {
     if (dir == 0 && x + faceWidth > width) dir = 1; if (dir == 1 && x < 0) dir = 0;
     return dir; //return direction
 }
-
-module.exports = reachEnd; //make reachEnd function available
