@@ -25,8 +25,9 @@ function run() {
 setInterval(run, 300); //execute 'run' function every 100ms
 
 function reachEnd(dir, faceWidth, x, width) {
-    //Keep going to the right, or flip direction
-    if (direction == 0 && pos + imgWidth >= pageWidth) direction = 1; else if (direction == 1 && pos <= 0) direction = 0;
+    //Flip direction if reach end of play zone
+    if (direction == 0 && pos + imgWidth > pageWidth) direction = 1;
+    if (direction == 1 && pos < 0) direction = 0;
     return dir; //return direction
 }
 
