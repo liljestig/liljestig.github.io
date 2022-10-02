@@ -1,5 +1,3 @@
-
-
 var x = 0; //set current x-position to 0
 var dir = 0; //set direction to right
 var face = 0; //set face image to 0
