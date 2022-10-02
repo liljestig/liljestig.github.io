@@ -8,8 +8,8 @@ let width = window.innerWidth; //set play zone to browser window width
 
 //Declare a two-dimensional array with two faces for each direction
 const looks = [
-    ['pacman1.png', 'pacman2.png'],
-    ['pacman3.png', 'pacman4.png']
+    ['./pacman1.png', './pacman2.png'],
+    ['./pacman3.png', './pacman4.png']
 ];
 
 function run() {
