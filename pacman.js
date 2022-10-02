@@ -26,8 +26,7 @@ setInterval(run, 300); //execute 'run' function every 100ms
 
 function reachEnd(dir, faceWidth, x, width) {
     //Flip direction if reach end of play zone
-    if (dir == 0 && x + faceWidth > width) dir = 1;
-    if (dir == 1 && x < 0) dir = 0;
+    if (dir == 0 && x + faceWidth > width) dir = 1; if (dir == 1 && x < 0) dir = 0;
     return dir; //return direction
 }
 
