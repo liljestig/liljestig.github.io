@@ -74,7 +74,14 @@
                 `;
             }
             else if (destination === 'portfolio') {
-                content.innerHTML = `<p>Here are some fun projects I've been working on</p>`;
+                content.innerHTML = `
+                <p>Here are some fun projects I've been working on:</p>
+                <ul>
+                    <li><a href="https://github.com/liljestig/pacmen">PacMen</a></li>
+                    <li><a href="https://github.com/liljestig/eyes">Eyes</a></li>
+                </ul>
+                <p>Check out <a href="https://github.com/liljestig">my GitHub account</a> for other fun stuff.</p>
+                `;
             }
         }
     </script>
