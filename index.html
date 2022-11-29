@@ -5,47 +5,78 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dan Liljestig's GitHub Pages Portfolio</title>
+    <style>
+        .button {
+            background-color: #2196F3;
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            width: 150px;
+        }
+
+        .header { grid-area: header; }
+        .menu { grid-area: menu; }
+        .main { grid-area: main; }
+        .footer { grid-area: footer; }
+
+        .grid-container {
+            display: grid;
+            grid-template-areas:
+               'header header header header header'
+               'menu main main main main'
+               'menu footer footer footer footer';
+            grid-template-columns: 190px auto auto auto auto;
+            gap: 10px;
+            background-color: #2196F3;
+            padding: 10px;        
+        }
+
+        .grid-container > div {
+            background-color: rgba(255, 255, 255, 0.8);
+            text-align: left;
+            padding: 20px;
+            font-size: 20px;
+        }
+    </style>
 </head>
-<style>
-    .item1 { grid-area: header; }
-    .item2 { grid-area: menu; }
-    .item3 { grid-area: main; }
-    .item4 { grid-area: right; }
-    .item5 { grid-area: footer; }
-
-    .grid-container {
-        display: grid;
-        grid-template-areas:
-           'header header header header header header'
-           'menu main main main main right'
-           'menu footer footer footer footer footer';
-        gap: 10px;
-        background-color: #2196F3;
-        padding: 10px;
-    }
-
-    .grid-container > div {
-        background-color: rgba(255, 255, 255, 0.8);
-        text-align: center;
-        padding: 20px 0;
-        font-size: 30px;
-    }
-</style>
-<body>
-
-    <h1>Grid Layout</h1>
-
-    <p>This grid layout contains six columns and three rows:</p>
-
+<body onload="updateMain('about')">
     <div class="grid-container">
-        <div class="item1">Header</div>
-        <div class="item2">
-            <img src="Dan_Avatar6_2021_200x200.jpg" alt="Dan Liljestig"  width="200" height="200">
+        <div class="header">Dan Liljestig, Senior Cloud Engineer, Singapore</div>
+        <div class="menu">
+            <img src="Dan_Avatar6_2021_150x150.jpg" alt="Dan Liljestig" width="150px" height="150px">
+            <p><button class="button" onclick="updateMain('about')">About Me</button></p>
+            <p><button class="button" onclick="updateMain('portfolio')">Portfolio</button></p>
         </div>
-        <div class="item3">Main</div>
-        <div class="item4">Right</div>
-        <div class="item5">Footer</div>
+        <div class="main" id="main"></div>
+        <div class="footer">You may contact me using:<br>Email, Facebook, LinkedIn, Twitter, or WhatsApp.</div>
     </div>
     
+    <script>
+        function updateMain(destination) {
+            content = document.getElementById('main');
+            if (destination === 'about') {
+                content.innerHTML = `
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/_r0qyGJJ6HA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <p>Hi there, my name is Dan.</p>
+                <p>I was born and raised in Stockholm, Sweden, but since 2011, living in Singapore.</p>
+                <p>One of my great passions in life has always been coding, doing software development through high school.</p>
+                <p>I started working with supporting AS/400 mainframes and LPAR, or logical partitioning.</p>
+                <p>Since the emerge of x86 virtualization however, I have spent most of my career migrating datacenters, moving physical machines into virtual machines.</p>
+                <p>In later years this has evolved into building and managing clouds — elastic virtual datacenters, that uses infrastructure as code to deploy and manage workloads.</p>
+                <p>Besides computers, I’m also a car guy, although not so much of a petrol-head anymore, since going electric earlier this year.</p>
+                <p>A fun fact about me is that I love cooking and baking in my spare time.</p>
+                `;
+            }
+            else if (destination === 'portfolio') {
+                content.innerHTML = `<p>Here are some fun projects I've been working on</p>`;
+            }
+        }
+    </script>
 </body>
 </html>
