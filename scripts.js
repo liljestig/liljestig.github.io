@@ -30,6 +30,10 @@ function updateMain(destination) {
                     <a href="https://github.com/liljestig/map-animation">Real Time Bus Tracker</a>
                     <p><a href="map-animation.jpg" alt="Real Time Bus Tracker"><img src="map-animation.jpg" width="20%" height="20%"></a></p>
                 </li>
+                <li>
+                    <a href="https://github.com/liljestig/formik-form">Formik Form</a>
+                    <p><a href="formik-form.jpg" alt="Real Time Bus Tracker"><img src="formik-form.jpg" width="20%" height="20%"></a></p>
+                </li>
             </ul>
         `;
     }
